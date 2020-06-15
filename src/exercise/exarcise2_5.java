@@ -13,6 +13,7 @@ public class exarcise2_5 {
 		//System.out.println(true + null);
 		System.out.println('A');
 		System.out.println((int)'A');
+		//
 
 	}
 
