@@ -15,17 +15,12 @@ public class Exercise4_14 {
 			System.out.print("1과 100사이의 값을 입력하세요 : ");
 			input = s.nextInt();
 			
-			if(input > answer){
-				//count++;
-				System.out.println("더 작은 값을 입력하세요. 시도횟수 : " + count);
-			} else if(input == answer){
-				//count++;
-				System.out.println("정답입니다. 시도횟수 : " + count);
-				break;
-			} else if(input < answer){
-				//count++;
-				System.out.println("더 큰 값을 입력하세요. 시도횟수 : " + count);
-			}
+			if(input > answer)
+				System.out.println("더 작은 값을 입력해야 합니다. 시도 횟수 : " + count);
+			else if(input == answer)
+				System.out.println("정답입니다. 시도 횟수 : " + count);
+			else
+				System.out.println("더 큰 값을 입력해야 합니다. 시도 횟수 : " + count);
 			
 			
 		} while(true);
