@@ -1,0 +1,4 @@
+name=박우재
+data=99
+data=100
+data=90
