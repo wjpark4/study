@@ -4,18 +4,14 @@ import java.util.Scanner;
 
 public class Baek_1476_2 {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		int e = sc.nextInt()-1;
-		int s = sc.nextInt()-1;
-		int m = sc.nextInt()-1;
-		for(int i=0;; i++){
-			if(i%15 == e && i%28 == s && i % 19 == m){
+		int E = sc.nextInt()-1;	// 0~14
+		int S = sc.nextInt()-1; // 0~27
+		int M = sc.nextInt()-1; // 0~18
+		
+		for(int i=0; ;i++){
+			if((i%15==E) && (i%28==S) && (i%19==M)){
 				System.out.println(i+1);
-				System.out.println();
-				System.out.println(i%15);
-				System.out.println(i%28);
-				System.out.println(i%19);
 				break;
 			}
 		}
