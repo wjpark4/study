@@ -2,26 +2,28 @@ package exercise;
 
 import java.util.*;
 
-public class Baek_15651_2 {
+public class Baek_15652 {
 	static boolean[] check = new boolean[10];
 	static int[] a = new int[10];
 	
-	static StringBuilder go(int index, int n, int m){
+	static StringBuilder go(int index, int start, int n, int m){
 		if(index == m){
 			StringBuilder sb = new StringBuilder();
 			for(int i=0; i<m; i++){
 				sb.append(a[i]);
-				if(i != (m-1)) sb.append(" ");
+				if(i != m-1) sb.append(" ");
 			}
 			sb.append("\n");
 			return sb;
 		}
+		
 		StringBuilder ans = new StringBuilder();
-		for(int i=1; i<=n; i++){
+		for(int i=start; i<=n ; i++){
 			a[index] = i;
-			ans.append(go(index+1, n, m));
+			ans.append(go(index+1, i, n, m));
 		}
 		return ans;
+		
 	}
 	
 	public static void main(String[] args) {
@@ -30,6 +32,6 @@ public class Baek_15651_2 {
 		int n = sc.nextInt();
 		int m = sc.nextInt();
 		
-		System.out.println(go(0, n, m));
+		System.out.println(go(0, 1, n, m));
 	}
 }

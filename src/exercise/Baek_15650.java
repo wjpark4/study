@@ -21,7 +21,7 @@ public class Baek_15650 {
 			if(check[i]) continue;
 			check[i] = true;
 			a[index] = i;
-			go(index+1, i+1, n, m);
+			go(index+1, i, n, m);
 			check[i] = false;
 		}
 	}
